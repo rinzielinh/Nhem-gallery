@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+
+
+   <head>
+      <title>HTML Layouts</title>
+      <img src="heading.jpg" alt="lêu lêu" style="width:710px;"><span style="border: 1px solid white"><img src="head.jpg" alt="lêu lêu" style="width:710px;">
+   </head>
+
+   <body>
+      <div style = "width:100%">
+
+         <div style = "background-color:#00FFFF; width:100%">
+            <h1></h1>
+         </div>
+
+         <div style = "background-color:#F0F8FF; height:auto; width:200px; float:left;">
+            <div><b>Welcome</b></div><br>
+            <li><a href="#">About Nhem</a></li><br />
+            <li><a href="#">About Nhems'parents</a></li><br />
+            <li><a href="#">Family and Friends</a></li><br />
+            <li><a href="#">Nhem's favorite food</a></li><br /><br />
+            <li><a href="#">Photos</a></li><br />
+            <li><a href="#">Videos</a></li><br />
+            <li><a href="#">Nhem's timetable</a></li><br />
+            <li><a href="https://www.facebook.com/rinzie.linh/" >Check mom's facebook link</a></li><br />
+
+         </div>
+
+         <div style = "background-color:lightpink; height:auto;; width:1120px; float:left;" >
+            <h1 style="font-size:300%;font-family:fantasy;color:white;text-align:center;">Guest book</h1>
+            <br>
+            <p style="font-size:150%;font-family:cursive;"> We would love to introduce you a page of our adorable cat. But first make sure that you've already signed in. </p><br><br>
+            <p style="font-size:100%;font-family:copperplate;"> Sign the Guest book</p>
+            <br>
+          <form method="post" action="http://www.yourdomain.com:8080/cgi-bin/
+            guestbook.pl/the path to this file">
+            <script type = "text/javascript" >
+          function displayInput()
+          {
+            var testInput = document.getElementById("name").value + "<br/>" + document.getElementById("email").value + "<br/>" + document.getElementById("comments").value ;
+            if (testInput.length==0) {
+              testInput = document.getElementById("stupid").innerHTML = "Hey, you didn't type anything!"
+            } else {
+              document.getElementById("tbl").innerHTML = "<tr><td  style='border-bottom: 5px solid green;'>" + testInput + "</td></tr>" + document.getElementById("tbl").innerHTML;
+
+            }
+          }
+
+            </script>
+
+            <table style="width:600px;">
+            <tr>
+              <td><label for="name">Name:</label> </td>
+              <td> <input id="name" type="text"
+              name="name" size="30" maxlength="30"></td>
+            </tr>
+            <tr>
+              <td> <label for="address">E-mail address:</label> </td>
+              <td>
+                <input id="email" type="text" name="address" size="30" maxlength="30"> </td>
+            </tr>
+            <tr>
+              <td> <label for="comments">Comments</label></td>
+              <td> <textarea id="comments" name="body" rows = "10" cols= "40"></textarea></td>
+            </tr>
+              </table>
+
+          </form>
+
+          <body>
+
+
+            <button onclick="displayInput();" >Post</button>
+            <table id="tbl">
+
+            </table>
+
+
+              <p id="para" style="color:white;background-color:lightblue;font-size:150%;font-family:cursive;"></p>
+              <p id="test" style="font-size:300%;font-family:brushscriptMT;color:red"></p> <br>
+              <p id="tes" style="color:blue"></p>
+              <p id style="color:yellow"></p>
+          </body>
+          <br>
+          <br>
+
+
+
+
+<br><br>
+<a href="file:///Users/rinzielinh/Documents/Chimchua%20homework.html" >Click here to visit Nhem's galery</a>
+
+<br><br>
+         </div>
+
+
+         <div style = "background-color:white; height:auto; width:100px; float:right;">
+            <div><b></b></div>
+            <img src="logo1.jpg" alt="lêu lêu" style="width:100px;"><br />
+            <br />
+
+
+         </div>
+
+         <div style = "background-color:#b5dcb3; clear:both">
+            <center>
+               For further infomation, please contact email: rinzielinh@gmail.com
+            </center>
+         </div>
+
+      </div>
+   </body>
+
+</html>

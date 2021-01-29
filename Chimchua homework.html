@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Too much</title>
+
+</head >
+<body>
+  <img src="logo1.jpg" alt="lêu lêu" style="width:10%;">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.nhemImg {
+  width:60%;
+  padding:10px;
+}
+.data {
+  text-align:center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Style the header */
+header {
+  background-color: lightpink;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: white;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  height: auto
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: white;
+  height: auto;; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: lightpink;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+
+<body>
+
+<h2>Let's take a look at Nhem's Galery</h2>
+
+
+
+<header>
+  <h2 style="font-size:90%;text-align:center;;">Galery</h2>
+</header>
+
+
+
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Photos</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <button onclick="prephoto();">Previous photo</button>
+    <button onclick="nextphoto();">Next photo</button>
+    <p id="photo" >  </p>
+    <h1></h1>
+    <table border="1" style="border:solid;">
+    <tr>
+      <td class="data"> <img onclick="bigphoto('nhem1.jpg');"  src="nhem1.jpg" alt="Nhem & Linh" class="nhemImg" > <p> Nhem & Linh</p> </td>
+      <td class="data"><img onclick="bigphoto('nhem2.jpg'); idx=1"  src="nhem2.jpg" alt="lêu lêu" class="nhemImg"><p> Nhem & parents</p></td>
+      <td class="data"><img onclick="bigphoto('nhem3.jpg');idx=2" src="nhem3.jpg" alt="lêu lêu" class="nhemImg"><p> Nhem is thinking about life</p></td>
+    </tr>
+    <tr>
+      <td class="data"><img onclick="bigphoto('nhem4.jpg');idx=3" src="nhem4.jpg" alt="lêu lêu" class="nhemImg"><p> Nhem the Rabbit</p></td>
+      <td class="data"><img onclick="bigphoto('nhem5.jpg');idx=4" src="nhem5.jpg" alt="lêu lêu" class="nhemImg" > <p> Stupid Nhem </p></td>
+      <td class="data"><img onclick="bigphoto('nhem6.jpg');idx=5" src="nhem6.jpg" alt="lêu lêu" class="nhemImg"> <p> Surprised Nhem</p></td>
+    </tr>
+
+    </table>
+  </article>
+</section>
+<script type="text/javascript">
+function bigphoto(a) {
+  document.getElementById('photo').innerHTML = '<img src=' + a + ' style="width:80%">';
+}
+
+function nextphoto() {
+
+  if (idx +1 >= photos.length) {
+    idx = 0;
+  } else {
+    idx = idx+1;
+  }
+  bigphoto(photos[idx]);
+  //document.getElementById('photo').innerHTML = '<img src='+ photos[idx]+ ' style="width:70%" > ';
+}
+
+function prephoto() {
+  if (idx<=0) {
+    idx = photos.length-1
+  } else {
+    idx = idx- 1;
+  }
+  bigphoto(photos[idx]);
+  //document.getElementById('photo').innerHTML = '<img src='+ prephotos[idx]+' style="width:70%"> ';
+}
+var photos = ["nhem1.jpg","nhem2.jpg","nhem3.jpg","nhem4.jpg","nhem5.jpg","nhem6.jpg"];
+var idx = 0;
+ </script>
+
+<footer>
+  <p>Thanks for watching!!!!</p>
+</footer>
+
+</body>
+</html>
